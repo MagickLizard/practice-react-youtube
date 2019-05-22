@@ -12,7 +12,6 @@ class App extends Component {
         q: term
       }
     });
-    console.log("response", response.data.items);
     this.setState({
       videos: response.data.items
     });
@@ -22,9 +21,9 @@ class App extends Component {
     return (
       <section className="section">
         <div className="container">
-          <h1 class="title">Youtube search</h1>
+          <h1 className="title">Youtube search</h1>
           <SearchBar onFormSubmit={this.onSearchTermSubmit} />
-          <h2 class="subtitle">Videos found: {this.state.videos.length}</h2>
+          <h2 className="subtitle">Videos found: {this.state.videos.length}</h2>
           <VideoList videoData={this.state.videos}> </VideoList>
         </div>
       </section>
